@@ -3,3 +3,6 @@
     "baseUrl": "src"
   }
 }
+
+// don't have to refer ../../../src 
+// src is now the base directory so we can reference it with /...something
