@@ -15,4 +15,8 @@ export default [
     path: 'testimonial',
     label: 'Testimonial',
   },
+  {
+    path: 'contact',
+    label: 'Contact'
+  }
 ];

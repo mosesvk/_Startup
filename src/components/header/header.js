@@ -13,7 +13,19 @@ export default function Header({ className }) {
         <Container sx={styles.container}>
           <Logo src={LogoDark}/>
           <Flex as={nav} sx={styles.nav}>
-            
+            {menuItems.map((item, idx) => (
+              <Link
+                activeClass='active'
+                to={item.path}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                key={idx}
+              >
+                {item.label}
+              </Link>
+            ))}
           </Flex> 
         </Container>
       </header>
