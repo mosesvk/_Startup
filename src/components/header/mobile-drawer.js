@@ -28,7 +28,9 @@ const social = [
 
 export default function MobileDrawer() {
   return (
-   <h1>Mobile Drawer</h1>
+    <Drawer>
+      
+    </Drawer>
   );
 };
 
