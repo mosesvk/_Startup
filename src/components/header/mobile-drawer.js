@@ -92,6 +92,10 @@ const styles = {
     '@media screen and (min-width: 1024px)': {
       display: 'none',
     },
+
+    '&:hover': {
+      cursor: 'pointer',
+    },
   },
 
   drawer: {
@@ -133,9 +137,7 @@ const styles = {
       cursor: 'pointer',
       borderBottom: '1px solid #e8e5e5',
       transition: 'all 0.25s',
-      '&:hover': {
-        color: 'secondary',
-      },
+
       '&.active': {
         color: 'secondary',
       },
