@@ -17,7 +17,7 @@ export default function Layout({ children }) {
   };
   
   return (
-    <React.Fragment>
+    <>
       <Sticky innerZ={1001} top={0} onStateChange={handleStateChange}>
         <Header className={`${isSticky ? 'sticky' : 'unSticky'}`} />
       </Sticky>
@@ -25,6 +25,6 @@ export default function Layout({ children }) {
         {children}
       </main>
       <Footer />
-    </React.Fragment>
+    </>
   );
 }
