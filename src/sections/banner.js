@@ -11,7 +11,7 @@ export default function Banner() {
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading as='h1' variant='heroPrimary'>
-            Top Quality Service 
+            Top Quality Service
           </Heading>
           <Text as='p' variant='heroSecondary'>
             Check out our website to find great service and Deals.
@@ -21,7 +21,7 @@ export default function Banner() {
         </Box>
 
         <Box sx={styles.banner.imageBox}>
-          <Image src={BannerImg} alt='banner' />
+          <Image sx={styles.banner.image} src={BannerImg} alt='banner' />
         </Box>
       </Container>
     </section>
@@ -82,5 +82,8 @@ const styles = {
         height: [245, 'auto'],
       },
     },
+    image: {
+      maxWidth: '80%'
+    }
   },
 };
