@@ -4,7 +4,12 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import Drawer from 'components/drawer';
 import { IoMdClose, IoMdMenu } from 'react-icons/io';
 import { Link } from 'react-scroll';
-import { FaFacebookF, FaTwitter, FaGithubAlt, FaDribbble } from 'react-icons/fa';
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaGithubAlt,
+  FaDribbble,
+} from 'react-icons/fa';
 import menuItems from './header.data';
 
 const social = [
@@ -27,12 +32,22 @@ const social = [
 ];
 
 export default function MobileDrawer() {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
+
   return (
-    <Drawer>
-      
-    </Drawer>
+    <Drawer
+      width='320px'
+      drawerHandler={
+        <Box sx={styles.handler}>
+          <IoMdMenu size='26px' />
+        </Box>
+      }
+      open={isDrawerOpen}
+      toggleHandler={() => setIsDrawerOpen((prevState) => !prevState)}
+      closeButton={<IoMdClose size='24px' color='black' />}
+    ></Drawer>
   );
-};
+}
 
 const styles = {
   handler: {
