@@ -12,7 +12,7 @@ export default function Header({ className }) {
       <header sx={styles.header} className={className} id='header'>
         <Container sx={styles.container}>
           <Logo src={LogoDark}/>
-          <Flex as={nav} sx={styles.nav}>
+          <Flex as='nav' sx={styles.nav}>
             {menuItems.map((item, idx) => (
               <Link
                 activeClass='active'
@@ -27,6 +27,9 @@ export default function Header({ className }) {
               </Link>
             ))}
           </Flex> 
+          <Button className='donate__btn' variant='secondary' aria-label='Get Started'>
+              Get Started
+          </Button>
         </Container>
       </header>
   );
