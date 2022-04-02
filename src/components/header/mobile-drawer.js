@@ -11,6 +11,7 @@ import {
   FaDribbble,
 } from 'react-icons/fa';
 import menuItems from './header.data';
+import { Scroll } from 'react-scroll/modules/mixins/Helpers';
 
 const social = [
   {
@@ -32,7 +33,7 @@ const social = [
 ];
 
 export default function MobileDrawer() {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   return (
     <Drawer
@@ -45,7 +46,38 @@ export default function MobileDrawer() {
       open={isDrawerOpen}
       toggleHandler={() => setIsDrawerOpen((prevState) => !prevState)}
       closeButton={<IoMdClose size='24px' color='black' />}
-    ></Drawer>
+      drawerStyle={styles.drawer}
+      closeBtnStyle={styles.close}
+    >
+      <Scrollbars autoHide>
+        <Box sx={styles.content}>
+          <Box sx={styles.menu}>
+            {menuItems.map((item, idx) => (
+              <Link
+                activeClass='active'
+                to={item.path}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                key={idx}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </Box>
+          <Box sx={styles.menuFooter}>
+            <Box sx={styles.social}>
+              {social.map((socialItem, idx) => (
+                <Box as='span' key={idx} sx={styles.social.icon}>
+                  <Link to={socialItem.path}>{socialItem.icon}</Link>
+                </Box>
+              ))}
+            </Box>
+          </Box>
+        </Box>
+      </Scrollbars>
+    </Drawer>
   );
 }
 
