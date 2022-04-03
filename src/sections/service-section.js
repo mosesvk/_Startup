@@ -56,7 +56,7 @@ export default function ServiceSection() {
     <section sx={{ variant: 'section.services' }}>
       <Container sx={styles.containerBox}>
         <Box sx={styles.thumbnail}>
-          <Image src={ServiceThumb} alt='Thumbnail' />
+          {/* <Image src={ServiceThumb} alt='Thumbnail' />
           <Button
             sx={styles.videoBtn}
             onClick={handleClick}
@@ -65,7 +65,7 @@ export default function ServiceSection() {
             <span>
               <IoIosPlay />
             </span>
-          </Button>
+          </Button> */}
           <Box sx={styles.shapeBox}>
             <Image src={shapePattern} alt='shape' />
           </Box>
@@ -91,12 +91,12 @@ export default function ServiceSection() {
           </Grid>
         </Box>
       </Container>
-      <ModalVideo
+      {/* <ModalVideo
         channel='youtube'
         isOpen={videoOpen}
         videoId='Db7xzarI3B8'
         onClose={() => setVideoOpen(false)}
-      />
+      /> */}
     </section>
   );
 }
