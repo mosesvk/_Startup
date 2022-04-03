@@ -10,13 +10,13 @@ export default function List({ items = [], parentStyle, childStyle }) {
       {/* icon, text, isAvailable */}
       {items.map((item, idx) => (
         <Flex
-          className={isAvailable ? 'open' : 'closed'}
+          className={item.isAvailable ? 'open' : 'closed'}
           as='li'
           sx={{...childStyle}}
           key={idx}
         >
           <IconButton sx={styles.listIcon} aria-label='list icon'>
-            {icon}
+            {item.icon}
           </IconButton>
           {item.text}
         </Flex>
