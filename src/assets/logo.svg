@@ -13,11 +13,11 @@
 <defs>
 <linearGradient id="paint0_linear" x1="16.4102" y1="-16.6934" x2="10.5876" y2="20.6654" gradientUnits="userSpaceOnUse">
 <stop stop-color="#0096D9"/>
-<stop offset="1" stop-color="#00C198"/>
+<stop offset="1" stop-color="#82C2E3"/>
 </linearGradient>
 <linearGradient id="paint1_linear" x1="9.13537" y1="13.6181" x2="18.5045" y2="32.4248" gradientUnits="userSpaceOnUse">
 <stop stop-color="#002DD9"/>
-<stop offset="1" stop-color="#00B2AB"/>
+<stop offset="1" stop-color="#82C2E3"/>
 </linearGradient>
 <linearGradient id="paint2_linear" x1="23.8071" y1="-3.42432" x2="6.08252" y2="38.1714" gradientUnits="userSpaceOnUse">
 <stop stop-color="#3482C0"/>
@@ -38,7 +38,7 @@
 <stop offset="1" stop-color="white"/>
 </linearGradient>
 <radialGradient id="paint5_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(21.5938 32.382) scale(27.8184 27.5367)">
-<stop stop-color="#FFFF00"/>
+<stop stop-color="white"/>
 <stop offset="1"/>
 </radialGradient>
 <clipPath id="clip0">
